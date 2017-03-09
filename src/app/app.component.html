@@ -1,7 +1,7 @@
 <form method="post" name="itemForm" #itemForm="ngForm">
   <div *ngFor="let item of items; let i = index;">
     <a href="javascript:void(0);" (click)="removeItem(i)">x</a>
-    <input type="text" name="name" title="name" [(ngModel)]="item.name">
+    <input type="text" name="name_{{i}}" title="name" [(ngModel)]="item.name">
     {{ item.name }}
   </div>
   <button type="button" (click)="addItem()">add</button>
